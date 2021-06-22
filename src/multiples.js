@@ -38,6 +38,3 @@ HoldNumbers.prototype.addMultiples = function() {
     }
     return this.sum;
 };
-
-// let newArray = [...new Set(this.array)]
-// return newArray
