@@ -17,4 +17,10 @@ describe('divide(num)', () => {
     expect(holdNumbers.divide(10)).toEqual(3);
     expect(holdNumbers.multiplyBy3()).toEqual([3,6,9]);
   });
+
+  test('should add multiples of three and return sum', () => {
+    expect(holdNumbers.divide(10)).toEqual(3);
+    expect(holdNumbers.multiplyBy3()).toEqual([3,6,9]);
+    expect(holdNumbers.addMultiples()).toEqual(18);
+  })
 });
