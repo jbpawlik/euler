@@ -19,6 +19,9 @@ export default function Sudoku() {
   this.row1 = [1,2,3];
   this.row2 = [3,1,2];
   this.row3 = [2,3,1];
+  this.col1 = [1,3,2];
+  this.col2 = [2,1,3];
+  this.col3 = [3,2,1];
 }
 
 Sudoku.prototype.includesAllNumbers = function() {
@@ -30,7 +33,7 @@ Sudoku.prototype.includesAllNumbers = function() {
 }
 
 Sudoku.prototype.firstColumnTrue = function() {
-  if (this.row1[0].includes(1) && this.row2[0].includes(2) && this.row3[0].includes(3)) {
+  if (this.col1.includes(1) && this.col1.includes(2) && this.col2.includes(3)) {
     return true;
   } else {
     return false;
