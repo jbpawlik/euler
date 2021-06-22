@@ -1,7 +1,20 @@
-import divide from "../src/multiples.js"
+import HoldNumbers from "../src/multiples.js"
+
+
 
 describe('divide(num)', () => {
+  let holdNumbers;
+  
+  beforeEach(() => {
+    holdNumbers = new HoldNumbers();
+  });
+
   test('should divide num by 3 without remainder and output answer', () => {
-    expect(divide(10)).toEqual(3);
-  })
-})
+    expect(holdNumbers.divide(10)).toEqual(3);
+  });
+
+  test('should loop in the array however many times numberDivided is and multiply by 3', () => {
+    expect(holdNumbers.divide(10)).toEqual(3);
+    expect(holdNumbers.multiplyBy3()).toEqual([3,6,9]);
+  });
+});

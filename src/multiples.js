@@ -1,11 +1,17 @@
-export default function divide(num) {
-  const numberDivided = Math.round(num / 3);
-  return numberDivided;
-  console.log(numberDivided);
+export default function HoldNumbers() {
+  this.numberDivided = 0;
+}
+
+HoldNumbers.prototype.divide = function(num) {
+  this.numberDivided = Math.round(num / 3);
+  return this.numberDivided;
 };
 
-
-// below 10 --> 10/3 = 3ish; 3*1, 3*2, 3*3 
-// includes() or match()
-
-//test 
+HoldNumbers.prototype.multiplyBy3 = function() {
+  this.array = [];
+  for (let i = 1; i <= this.numberDivided; i++) {
+    this.array.push(i * 3);
+    console.log(this.array);
+  }
+  return this.array;
+};
